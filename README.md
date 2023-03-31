@@ -91,4 +91,4 @@ Accuracy for class: truck is 93.7 %
 Test F1 score: 0.9109
 
 ## 결론
-Alexnet 모델은 epoch 26 에서 최적의 결과가 나옴  
+Alexnet 모델은 epoch 26 에서 최적의 결과가 나옴 (정확도 기준)
