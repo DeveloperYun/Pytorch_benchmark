@@ -92,3 +92,100 @@ Test F1 score: 0.9109
 
 ## 결론
 Alexnet 모델은 epoch 26 에서 최적의 결과가 나옴 (정확도 기준)
+
+***
+# efficientnet_b0
+
+## 하이퍼 파라미터
+ - batch_size = 4  
+ >배치사이즈를 4보다 크게 주면 memory (gpu ram) 에러가 나버림. 따라서 현재 환경에서 최대 배치사이즈는 4였음
+ - epoch = 30
+ - optimizer = SGD
+ - learning rate = 0.001
+
+ ## 결과
+ ### 학습결과(수치)
+Training : [1, 10000] loss: 0.729 accuracy: 0.768  
+Validation : [1,  1250] loss: 0.348 accuracy: 0.792  
+Training : [2, 10000] loss: 0.315 accuracy: 0.895  
+Validation : [2,  1250] loss: 0.266 accuracy: 0.898  
+Training : [3, 10000] loss: 0.213 accuracy: 0.930  
+Validation : [3,  1250] loss: 0.215 accuracy: 0.930  
+Training : [4, 10000] loss: 0.159 accuracy: 0.946  
+Validation : [4,  1250] loss: 0.213 accuracy: 0.943  
+Training : [5, 10000] loss: 0.123 accuracy: 0.959  
+Validation : [5,  1250] loss: 0.206 accuracy: 0.954  
+Training : [6, 10000] loss: 0.095 accuracy: 0.969  
+Validation : [6,  1250] loss: 0.205 accuracy: 0.963  
+Training : [7, 10000] loss: 0.080 accuracy: 0.973  
+Validation : [7,  1250] loss: 0.200 accuracy: 0.967  
+Training : [8, 10000] loss: 0.066 accuracy: 0.978  
+Validation : [8,  1250] loss: 0.207 accuracy: 0.970  
+Training : [9, 10000] loss: 0.057 accuracy: 0.980  
+Validation : [9,  1250] loss: 0.199 accuracy: 0.973  
+Training : [10, 10000] loss: 0.050 accuracy: 0.984  
+Validation : [10,  1250] loss: 0.187 accuracy: 0.976  
+Training : [11, 10000] loss: 0.043 accuracy: 0.985  
+Validation : [11,  1250] loss: 0.195 accuracy: 0.977  
+Training : [12, 10000] loss: 0.037 accuracy: 0.988  
+Validation : [12,  1250] loss: 0.203 accuracy: 0.979  
+Training : [13, 10000] loss: 0.032 accuracy: 0.990  
+Validation : [13,  1250] loss: 0.186 accuracy: 0.982  
+Training : [14, 10000] loss: 0.030 accuracy: 0.990  
+Validation : [14,  1250] loss: 0.190 accuracy: 0.982  
+Training : [15, 10000] loss: 0.029 accuracy: 0.990  
+Validation : [15,  1250] loss: 0.183 accuracy: 0.982  
+Training : [16, 10000] loss: 0.027 accuracy: 0.991  
+Validation : [16,  1250] loss: 0.189 accuracy: 0.983  
+Training : [17, 10000] loss: 0.025 accuracy: 0.992  
+Validation : [17,  1250] loss: 0.193 accuracy: 0.983  
+Training : [18, 10000] loss: 0.024 accuracy: 0.992  
+Validation : [18,  1250] loss: 0.203 accuracy: 0.983  
+Training : [19, 10000] loss: 0.022 accuracy: 0.993  
+Validation : [19,  1250] loss: 0.196 accuracy: 0.984  
+Training : [20, 10000] loss: 0.016 accuracy: 0.995  
+Validation : [20,  1250] loss: 0.189 accuracy: 0.986  
+Training : [21, 10000] loss: 0.018 accuracy: 0.994  
+Validation : [21,  1250] loss: 0.199 accuracy: 0.985  
+Training : [22, 10000] loss: 0.016 accuracy: 0.995  
+Validation : [22,  1250] loss: 0.212 accuracy: 0.985  
+Training : [23, 10000] loss: 0.015 accuracy: 0.996  
+Validation : [23,  1250] loss: 0.210 accuracy: 0.986  
+Training : [24, 10000] loss: 0.015 accuracy: 0.995  
+Validation : [24,  1250] loss: 0.196 accuracy: 0.986  
+Training : [25, 10000] loss: 0.014 accuracy: 0.995  
+Validation : [25,  1250] loss: 0.199 accuracy: 0.986  
+Training : [26, 10000] loss: 0.013 accuracy: 0.996  
+Validation : [26,  1250] loss: 0.207 accuracy: 0.986  
+Training : [27, 10000] loss: 0.013 accuracy: 0.996  
+Validation : [27,  1250] loss: 0.215 accuracy: 0.986  
+Training : [28, 10000] loss: 0.013 accuracy: 0.996  
+Validation : [28,  1250] loss: 0.198 accuracy: 0.987  
+Training : [29, 10000] loss: 0.012 accuracy: 0.997  
+Validation : [29,  1250] loss: 0.198 accuracy: 0.988  
+Training : [30, 10000] loss: 0.011 accuracy: 0.997  
+Validation : [30,  1250] loss: 0.219 accuracy: 0.987  
+
+### loss graph
+![download](https://user-images.githubusercontent.com/81633639/229193457-a49766d8-a5aa-4a55-8730-b5ba035a6025.png)
+
+### class 별 accuracy
+Accuracy for class: plane is 95.5 %  
+Accuracy for class: car   is 97.0 %  
+Accuracy for class: bird  is 92.0 %  
+Accuracy for class: cat   is 91.4 %  
+Accuracy for class: deer  is 93.1 %  
+Accuracy for class: dog   is 90.2 %  
+Accuracy for class: frog  is 93.7 %  
+Accuracy for class: horse is 97.4 %  
+Accuracy for class: ship  is 95.7 %  
+Accuracy for class: truck is 96.2 %  
+
+### class graph
+![download](https://user-images.githubusercontent.com/81633639/229193575-e6b7fccd-c956-4d3b-83a2-dbac4319af1e.png)
+
+### f1-score
+Test F1 score: 0.9588
+
+## 결론
+efficientnet_b0 모델은 epoch 27 에서 최적의 결과가 나옴 (정확도 기준)
